@@ -15,9 +15,9 @@ def get_config():
         client = "mysqlclient"
 
     library_dirs = [ os.path.join(connector, r'lib\opt') ]
-    libraries = [ 'kernel32', 'advapi32', 'wsock32', client ]
+    libraries = [ 'kernel32', 'advapi32', 'wsock32','libmysql' ]
     include_dirs = [ os.path.join(connector, r'include') ]
-    extra_compile_args = [ '/Zl' ]
+    extra_compile_args = [ '' ]
     
     name = "MySQL-python"
     if enabled(options, 'embedded'):
